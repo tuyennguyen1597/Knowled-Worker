@@ -1,0 +1,15 @@
+
+
+/* MENU BAR + Top-level MENU BUTTONS */
+/*** The menu bar itself ***/    
+.menu-button {
+    -fx-background-color: orange;
+}
+
+.menu-item {
+    -fx-background-color:  #FEF1D0;
+}
+
+.menu-item:focused, .menu-item:hovered {
+    -fx-background-color: orange; 
+}

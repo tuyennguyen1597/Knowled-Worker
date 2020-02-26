@@ -1,0 +1,16 @@
+.toggle-button{
+    -fx-background-color:  #f8b229;
+    -fx-border-color: black;
+    -fx-font-family: Arial;
+    -fx-text-alignment: center;
+}
+
+.toggle-button:hover {
+    -fx-background-color: #fcbf2d;
+    -fx-text-alignment: center;
+}
+
+.toggle-button:pressed {
+    -fx-background-color: #fcbf2d;
+    -fx-text-alignment: center;
+}

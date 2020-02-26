@@ -1,0 +1,26 @@
+.button {
+    -fx-font-weight: bold;
+    -fx-background-color: orange;
+    -fx-font-size: 11;
+    -fx-text-fill: black;
+    -fx-background-radius: 30;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.buton:hover {
+    -fx-background-color: #fcbf2d;
+    -fx-text-alignment: center;
+}
+
+.button:pressed {
+    -fx-background-color: white;
+    -fx-text-fill: orange;
+    -fx-font-weight: bold;
+    -fx-border-color: orange;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-rotate: 5;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+

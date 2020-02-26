@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="457.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="focusapp.TestDeepFocusController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="410.0" prefWidth="610.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefHeight="350.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="347.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <ListView fx:id="masterSideMenu" onKeyReleased="#userSidebarClick" onMouseClicked="#userSidebarClick" prefHeight="345.0" prefWidth="145.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #FEDA87#FEDA87 #FEDA87#FEDA87;">
+                           <children>
+                              <Label fx:id="digitalClock" alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="48.0" prefHeight="67.0" prefWidth="284.0" style="-fx-background-color: #FEF1D0 #FEF1D0;" text="HH:MM:SS" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Bold" size="55.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="43.0" layoutY="190.0" prefHeight="118.0" prefWidth="260.0">
+                                 <children>
+                                    <HBox prefHeight="26.0" prefWidth="307.0">
+                                       <children>
+                                          <Label fx:id="titleLabel" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="113.0" text="Title: " visible="false">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="title" prefHeight="19.0" prefWidth="191.0" style="-fx-background-color: #FEF1D0 #FEF1D0;" visible="false" wrapText="true">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutY="28.0" prefHeight="92.0" prefWidth="306.0">
+                                       <children>
+                                          <Label fx:id="descriptionLabel1" prefHeight="23.0" prefWidth="113.0" text="Description: " visible="false">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="description" alignment="TOP_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="191.0" style="-fx-background-color: #FEF1D0 #FEF1D0;" visible="false" wrapText="true">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                              <Label fx:id="dateToday" contentDisplay="CENTER" layoutX="61.0" layoutY="29.0" prefHeight="19.0" prefWidth="252.0" style="-fx-text-fill: ORANGE;">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="62.0" layoutY="119.0" prefHeight="24.0" prefWidth="270.0">
+                                 <children>
+                                    <Label fx:id="dynamicLabel" alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="237.0" text="Start Timer :" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Label>
+                                    <Circle fx:id="stop" fill="#29ff21" layoutX="258.0" layoutY="12.0" onMouseClicked="#stopTimer" radius="12.0" stroke="#29ff21" strokeType="INSIDE" />
+                                    <Circle fx:id="start" fill="#f42922" layoutX="258.0" layoutY="12.0" onMouseClicked="#startTimer" radius="12.0" stroke="#f42922" strokeType="INSIDE" />
+                                 </children>
+                              </AnchorPane>
+                              <Label fx:id="startTimePrompt" alignment="CENTER_RIGHT" layoutX="102.0" layoutY="147.0" prefHeight="24.0" prefWidth="237.0">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox layoutX="42.0" layoutY="336.0" prefHeight="30.0" prefWidth="310.0" spacing="10.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#gentlePiano" prefHeight="24.0" prefWidth="102.0" stylesheets="@ButtonDesign.css" text="Gentle Acoustic" />
+                                    <Button fx:id="riverFlute" mnemonicParsing="false" onAction="#riverFlute" prefHeight="22.0" prefWidth="85.0" stylesheets="@ButtonDesign.css" text="River Flute" />
+                                    <Button fx:id="concentrationMusic" mnemonicParsing="false" onAction="#concentrationMusic" prefHeight="22.0" prefWidth="104.0" stylesheets="@ButtonDesign.css" text="Concentration" />
+                                 </children>
+                              </HBox>
+                           </children></AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <HBox style="-fx-background-color: #f8b229 #f8b229;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="32.0" prefWidth="600.0">
+                     <children>
+                        <HBox prefHeight="59.0" prefWidth="666.0" style="-fx-background-color: #f8b229 #f8b229; -fx-border-color: Black;">
+                           <children>
+                              <Label prefHeight="49.0" prefWidth="544.0" style="-fx-font-family: arial;" text="Deep Focus">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Label>
+                              <VBox prefHeight="61.0" prefWidth="64.0">
+                                 <children>
+                                    <Label />
+                                    <Button mnemonicParsing="false" onAction="#aboutClick" stylesheets="@ButtonDesign.css" text="About" />
+                                    <Label />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="58.0" prefWidth="70.0">
+                                 <children>
+                                    <Label />
+                                    <Button mnemonicParsing="false" onAction="#faqClick" prefHeight="24.0" prefWidth="44.0" stylesheets="@ButtonDesign.css" text="FAQ" />
+                                    <Label />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ToggleButton mnemonicParsing="false" onAction="#kanboardClick" prefHeight="150.0" prefWidth="150.0" stylesheets="@ToggleButtonDesign.css" text="Kanban" />
+                  <ToggleButton mnemonicParsing="false" prefHeight="150.0" prefWidth="100.0" stylesheets="@ToggleButtonDesign.css" text="Deep Focus" />
+                  <ToggleButton mnemonicParsing="false" onAction="#pieChartClick" prefHeight="150.0" prefWidth="100.0" stylesheets="@ToggleButtonDesign.css" text="Pie Chart" />
+                  <ToggleButton mnemonicParsing="false" onAction="#dbClick" prefHeight="150.0" prefWidth="100.0" stylesheets="@ToggleButtonDesign.css" text="Daily Breakdown" wrapText="true" />
+                  <ToggleButton mnemonicParsing="false" onAction="#wbTrendsClick" prefHeight="150.0" prefWidth="100.0" stylesheets="@ToggleButtonDesign.css" text="Weekly Breakdown" wrapText="true" />
+                  <ToggleButton mnemonicParsing="false" onAction="#weeklyTrendsClick" prefHeight="150.0" prefWidth="100.0" stylesheets="@ToggleButtonDesign.css" text="Trends" />
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
